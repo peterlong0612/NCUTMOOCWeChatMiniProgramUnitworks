@@ -1,0 +1,27 @@
+<!--pages/framework/framework.wxml-->
+<!-- <text>pages/framework/framework.wxml</text> -->
+
+<view class="box">
+  <view class="title">框架</view>
+
+  <navigator url="./flex/flex" open-type="navigate">
+    <view class="waikuang">
+      <icon type="success_no_circle" class="myleft"></icon>
+      <view class="mycenter">Flex弹性盒模型布局</view>
+      <image src="/images/right-arrow.png" class="myright"></image>
+    </view>
+  </navigator>
+  
+  <navigator url="./float/float" open-type="navigate">
+    <view class="waikuang">
+      <icon type="success_no_circle" class="myleft"></icon>
+      <view class="mycenter">Float页面布局</view>
+      <image src="/images/right-arrow.png" class="myright"></image>
+    </view>
+  </navigator>
+  
+  <view>
+    <image style="width:600rpx;" mode="widthFix" src="/images/pinkstar.png" bindtap="tapPinkstar"></image>
+  </view>
+
+</view>

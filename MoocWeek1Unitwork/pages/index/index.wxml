@@ -1,0 +1,24 @@
+<!--index.wxml-->
+<view class="box">
+  <view class="title">
+    个人信息（仅供作业用）
+  </view>
+  ========class=======
+  <view class="class_box" wx:for="{{me}}" wx:key="index" wx:for-index="col">
+    <view class="inforbox_1">
+      <view class="col_1">{{col}}：</view>
+      <view class="detail_1">{{item}}</view>
+    </view>
+
+  </view>
+  ========style=======
+  <view style="background-color:yellow;  " wx:for="{{me}}" wx:key="index" wx:for-index="col">
+    <view style="display:flex; justify-content: left;">
+      <view style="font-weight:bold;">{{col}}：</view>
+      <view style="text-decoration:underline">{{item}}</view>
+    </view>
+    <!-- <view style="display:flex; justify-content: left;"><view style="font-weight:bold;">院系：</view><view style="text-decoration:underline">计算机学院</view></view>
+    <view style="display:flex; justify-content: left;"><view style="font-weight:bold;">姓名：</view><view style="text-decoration:underline">龙锴</view></view>
+    <view style="display:flex; justify-content: left;"><view style="font-weight:bold;">籍贯：</view><view style="text-decoration:underline">贵州</view></view> -->
+  </view>
+</view>

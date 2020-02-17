@@ -1,0 +1,6 @@
+/**app.wxss**/
+.box{
+  border: 10rpx solid pink;
+  margin: 10rpx;
+  padding:10rpx; 
+}

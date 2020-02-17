@@ -1,0 +1,28 @@
+/**index.wxss**/
+.title{
+  font-family: cursive;
+  font-size: 20px;
+  font-style: italic;
+  font: center;
+  color: purple;
+  text-align: center;
+  font-weight: bold;
+}
+
+.class_box{
+  background-color: greenyellow;
+}
+
+.inforbox_1{
+  display:flex;
+  justify-content: left; 
+  font-weight: normal;
+}
+
+.col_1{
+  font-weight: bold;
+}
+
+.detail_1{
+  text-decoration: underline;
+}

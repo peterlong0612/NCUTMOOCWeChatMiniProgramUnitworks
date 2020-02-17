@@ -1,0 +1,38 @@
+{
+  "pages": [
+    "pages/framework/framework",
+    "pages/index/index",
+    "pages/logs/logs",
+
+    "pages/framework/flex/flex",
+    "pages/framework/float/float"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#0094ff",
+    "navigationBarTitleText": "MoocWeek2Unitwork",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath": "icons/index.png",
+      "selectedIconPath": "icons/index_active.png"
+    },
+    {
+      "pagePath": "pages/framework/framework",
+      "text": "框架",
+      "iconPath": "icons/android.png",
+      "selectedIconPath": "icons/android_active.png"
+    },
+    {
+      "pagePath": "pages/logs/logs",
+      "text": "logs",
+      "iconPath": "icons/Flickr.png",
+      "selectedIconPath": "icons/Flickr_active.png"
+    }]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

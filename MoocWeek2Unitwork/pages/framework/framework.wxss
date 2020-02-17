@@ -1,0 +1,26 @@
+/* pages/framework/framework.wxss */
+
+navigator{
+  margin: 5px;
+  font-size: 20px;
+}
+
+.waikuang{
+  display: flex;
+  flex-direction: row;
+  margin: 5px 0px;
+  padding: 5px 0px;
+}
+.myleft{
+  margin-right: 10px;
+}
+
+.mycenter{
+  flex:10;
+}
+
+.myright{
+  width: 40rpx;
+  height: 40rpx;
+  margin-top:5px;
+}

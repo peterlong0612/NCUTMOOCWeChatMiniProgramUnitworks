@@ -1,0 +1,88 @@
+/* pages/framework/float/float.wxss */
+.bg1 {
+  /* 背景1 */
+  height: 240px;
+  width: 200px;
+  margin: 10px auto; /* 上下边距为10px，左右边距平均分配（实现水平居中对齐） */
+}
+
+.box1 {
+  /* 背景1中的第1个颜色块 */
+  width: 100px;
+  text-align: center;
+  line-height: 80px;
+  background-color: red;
+  margin: 0 auto;
+}
+
+.box2 {
+  /* 背景1中的第2个颜色块 */
+  width: 100px;
+  text-align: center;
+  line-height: 80px;
+  background-color: yellow;
+  float: left; /* 左浮动 */
+}
+
+.box3 {
+  /* 背景1中的第3个颜色块 */
+  width: 100px;
+  text-align: center;
+  line-height: 80px;
+  background-color: gold;
+  float: right; /* 左浮动 */
+}
+
+.box4 {
+  /* 背景1中的第4个颜色块 */
+  width: 100px;
+  text-align: center;
+  line-height: 80px;
+  background-color: greenyellow;
+  margin: 0 auto;
+  clear: both; /* 清除左右两边浮动 */
+}
+
+.bg2 {
+  /* 背景2 */
+  height: 400rpx;
+  text-align: center;
+  margin: 10px auto;
+}
+
+.header {
+  /* 头部标题区 */
+  line-height: 100rpx; /* 定义行高，同时实现文字垂直方向居中对齐 */
+  background-color: red;
+}
+
+.leftBar {
+  /* 左边导航区 */
+  width: 20%;
+  line-height: 200rpx; /* 定义行高，同时实现文字垂直方向居中对齐 */
+  background-color: yellow;
+  float: left; /* 左浮动 */
+}
+
+.main {
+  /* 中间内容区 */
+  width: 60%;
+  line-height: 200rpx;
+  background-color: rgb(157, 255, 0);
+  float: left; /* 左浮动 */
+}
+
+.rightBar {
+  /* 右边内容区 */
+  width: 20%;
+  line-height: 200rpx;
+  background-color: yellow;
+  float: right; /* 右浮动 */
+}
+
+.footer {
+  /* 底部版权区 */
+  line-height: 100rpx;
+  background-color: red;
+  clear: both;
+}
