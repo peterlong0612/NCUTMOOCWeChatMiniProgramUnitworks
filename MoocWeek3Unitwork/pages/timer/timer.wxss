@@ -1,0 +1,31 @@
+/* pages/timer/timer.wxss */
+
+.timebox{
+  border: 2px solid black;
+  background-color: black; 
+}
+
+.time{
+  border: 2px solid white;
+  background-color: black;
+  border-radius: 50rpx;
+  line-height: 300rpx;
+  color:#00ffe0;
+  font-size: 160rpx;
+  text-align: center;
+  /* margin: 20px 20px 0 20px; */
+}
+
+.btns{
+  /* line-height: 50rpx; */
+  width: 730rpx;
+  margin: 10px 10px 0 10px;
+  display: flex;
+  flex-direction: row;
+}
+
+button{
+  font-size: 40rpx;
+  line-height: 50rpx;
+  border-radius:0; 
+}
