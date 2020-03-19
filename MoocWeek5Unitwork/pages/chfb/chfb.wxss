@@ -1,0 +1,27 @@
+/* pages/chfb/chfb.wxss */
+
+.con {
+  border: px solid black;
+  margin: 10px;
+}
+
+.chfbox {
+  margin: 0 50px;
+  padding: 5px;
+  border: 10px dotted #00ff94;
+}
+
+.inlineblock {
+  font-size: 14px;
+  display: inline-block;
+  width: 65rpx;
+}
+
+.inlineblock2 {
+  font-size: 14px;
+  display: inline-block;
+  /* align-items: flex-end;
+  align-content:flex-end;  */
+  width: 65rpx;
+  text-align: right;
+}

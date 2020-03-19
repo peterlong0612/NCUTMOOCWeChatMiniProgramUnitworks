@@ -1,0 +1,29 @@
+{
+  "pages": [
+    "pages/chfb/chfb",
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#0094ff",
+    "navigationBarTitleText": "",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath": "icons/index2.png",
+      "selectedIconPath": "icons/index2_active.png"
+    },
+    {
+      "pagePath": "pages/chfb/chfb",
+      "text": "九九乘法表",
+      "iconPath": "icons/Flickr.png",
+      "selectedIconPath": "icons/Flickr_active.png"
+    }]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

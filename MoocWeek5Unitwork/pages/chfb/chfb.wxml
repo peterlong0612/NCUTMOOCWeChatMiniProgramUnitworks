@@ -1,0 +1,37 @@
+<!--pages/chfb/chfb.wxml-->
+<!-- <text>pages/chfb/chfb.wxml</text> -->
+<!-- 本想用类似递归的方法，奈何wx:for只能用于数组对象 -->
+<!-- inline-block为行内块元素，想让其内部块靠右真是难为我了，后来查了一下这不就是用在父元素里面使用text-align吗？愚钝愚钝 -->
+<view class="con">
+  <view class="chfbox">
+    <view wx:for="123456789" wx:for-item="i">
+      <view class="inlineblock" wx:for="123456789" wx:for-item="j" wx:if="{{j<=i}}">
+        {{j}}x{{i}}={{i*j}}
+      </view>
+    </view>
+  </view>
+  -------------------------------------------------------------------------
+  <view class="chfbox">
+    <view wx:for="987654321" wx:for-item="i">
+      <view class="inlineblock" wx:for="123456789" wx:for-item="j" wx:if="{{j<=i}}">
+        {{j}}x{{i}}={{i*j}}
+      </view>
+    </view>
+  </view>
+  -------------------------------------------------------------------------
+  <view class="chfbox">
+    <view wx:for="123456789" wx:for-item="i" style="text-align:right;">
+      <view class="inlineblock2" wx:for="987654321" wx:for-item="j" wx:if="{{j<=i}}">
+        {{i*j}}={{i}}x{{j}}
+      </view>
+    </view>
+  </view>
+  -------------------------------------------------------------------------
+  <view class="chfbox">
+    <view wx:for="987654321" wx:for-item="i" style="text-align:right;">
+      <view class="inlineblock2" wx:for="987654321" wx:for-item="j" wx:if="{{j<=i}}">
+        {{i*j}}={{i}}x{{j}}
+      </view>
+    </view>
+  </view>
+</view>
