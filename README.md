@@ -137,7 +137,7 @@ timer: function() {
 </view>
 ```
 
-效果：
+效果（说明：竖屏不够，横屏来凑，规格为：iPhone 7 横屏 667x375 | Dpr:2）：
 
 ![九九乘法表-左下](./Mdsrc/99chf-1.png)
 
