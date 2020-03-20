@@ -2,12 +2,12 @@
 <!-- <text>pages/timer/timer.wxml</text> -->
 
 <view>
-  <view class="timebox" >
+  <view class="timebox">
     <view class="title">Timer</view>
     <view class="time">
       {{num}}
     </view>
-    <view >
+    <view>
       <view class="btns">
         <button bindtap="start" style="background-color:{{btncolor[0]}};">开始计时</button>
         <button bindtap="stop" style="background-color:{{btncolor[1]}};">停止计时</button>
@@ -19,8 +19,37 @@
   </view>
 
   <view style="text-align:center;">
-      触底声音
-    <image src="/images/pinkstar.png" mode="aspectFit">  
+    触底声音
+    <image src="/images/pinkstar.png" mode="aspectFit">
     </image>
   </view>
+
+  <!-- <view wx:for="北方工业大学" style='float:left'>
+
+   {{item}}
+
+</view>
+<template name='red'>
+
+<text>我是红色</text>
+
+</template>
+
+
+
+<template name='blue'>
+
+<text>我是蓝色</text>
+
+</template>
+
+
+
+<block wx:for='{{[1,2]}}' wx:key='{{index}}'>
+
+<template is='red' />
+
+<template is='blue' />
+
+</block> -->
 </view>

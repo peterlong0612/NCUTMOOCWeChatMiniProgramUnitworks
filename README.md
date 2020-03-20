@@ -11,7 +11,9 @@ Markdown菜鸟教程地址：https://www.runoob.com/markdown/md-tutorial.html
 
 ---
 
-## Week3 关于计时器的一个bug及解决       Feb 27th, 2020
+## Week3 
+
+### 关于计时器的一个bug及解决       Feb 27th, 2020
 
 做作业的时候发现：
 
@@ -78,15 +80,17 @@ timer: function() {
 },
 ```
 
-效果：
+效果（触底声音因为不知道有什么声音素材网站，就自己用jijidown下载的B站上的几个海绵宝宝动画然后挑一个用pr剪的声音，这一集是哥俩在手套节坐车坐过站到一片更深的海底深渊的故事，声音是派大星看见“离开比奇堡海滩”牌子问海绵宝宝时的）：
 
-![计时器演示图](./Mdsrc/timer.png)
+![计时器演示图](./Mdsrc/Timer_soogif.gif)
 
 ---
 
 
 
-## Week5 四向九九乘法表 March,20 th
+## Week5 
+
+### 四向九九乘法表 March,20 th
 
 两个点，
 
@@ -143,4 +147,61 @@ timer: function() {
 
 ![九九乘法表-右上](./Mdsrc/99chf-4.png)
 
+### 模板定义与引用
+
+**index.js**
+
+```
+data{
+	stu01:{
+		name:'张三',
+		age:'21',
+		gender:'男'
+		},
+	stu02:{
+		name:'李四',
+		age:'19',
+		gender:'女'
+	}
+}
+```
+
+**index.wxml**
+
+```xml
+<import src='template.wxml'/>
+<template is='student' data="{{...stu01}}"/>
+---------------------------------------------
+<template is='student' data="{{...stu02}}"/>
+---------------------------------------------
+<template is='student' data="{{name:'王五',age:'20',gender:'男'}}"/>
+```
+
+​	注：如果A import B, B import C，那么A只能引用B中的template模板，即  **<u>import不具有传递性</u>**
+
+**template.wxml**
+
+```xml
+<template name='student'>
+	<view>name:{{name}}</view>
+    <view>age:{{age}}</view>
+    <view>gender:{{gender}}</view>
+</template>
+```
+
+
+
+### include 引用
+
+```xml
+<include src='header.wxml'/>
+```
+
+​	import只能引用文件中的template，而 include 可以引用文件中除了\<template/\>和\<wxs/\>之外的整个代码，相当于将目标文件中的代码拷贝到include位置。
+
+
+
+
+
 学的很渣，欢迎交流指教！
+
