@@ -101,7 +101,7 @@ timer: function() {
 
 代码：
 
-```javascript
+```xml
 <!--pages/chfb/chfb.wxml-->
 <!-- <text>pages/chfb/chfb.wxml</text> -->
 <!-- 本想用类似递归的方法，奈何wx:for只能用于数组对象 -->
@@ -169,12 +169,12 @@ data{
 **index.wxml**
 
 ```xml
-<import src='template.wxml'/>
-<template is='student' data="{{...stu01}}"/>
----------------------------------------------
-<template is='student' data="{{...stu02}}"/>
----------------------------------------------
-<template is='student' data="{{name:'王五',age:'20',gender:'男'}}"/>
+    <import src='template.wxml'/>
+    <template is='student' data="{{...stu01}}"/>
+    ---------------------------------------------
+    <template is='student' data="{{...stu02}}"/>
+    ---------------------------------------------
+    <template is='student' data="{{name:'王五',age:'20',gender:'男'}}"/>
 ```
 
 ​	注：如果A import B, B import C，那么A只能引用B中的template模板，即  **<u>import不具有传递性</u>**
@@ -183,7 +183,7 @@ data{
 
 ```xml
 <template name='student'>
-	<view>name:{{name}}</view>
+    <view>name:{{name}}</view>
     <view>age:{{age}}</view>
     <view>gender:{{gender}}</view>
 </template>
@@ -194,7 +194,7 @@ data{
 ### include 引用
 
 ```xml
-<include src='header.wxml'/>
+	<include src='header.wxml'/>
 ```
 
 ​	import只能引用文件中的template，而 include 可以引用文件中除了\<template/\>和\<wxs/\>之外的整个代码，相当于将目标文件中的代码拷贝到include位置。
