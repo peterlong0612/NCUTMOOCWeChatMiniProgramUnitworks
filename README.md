@@ -88,7 +88,7 @@ timer: function() {
 
 
 
-## Week5 
+## Week5  渲染与引用
 
 ### 四向九九乘法表 March,20 th
 
@@ -203,5 +203,219 @@ data{
 
 
 
-学的很渣，欢迎交流指教！
+---
+
+## Week 6  小程序组件（1）
+
+### 6.1 货币兑换
+
+（边上课边记，回顾一下前面的知识和记录新的知识）
+
+**WXML**
+
+```html
+<view class='title'>货币兑换</view>
+  <form bindsubmit='calc' bindreset='reset'>
+    <input name='cels' placeholder='请输入人民币金额' type='number' auto-focus='true'></input>
+    <view class='btnLayout'>
+      <button type='primary' form-type='submit'>计算</button>
+      <button type='primary' form-type='reset'>清除</button>
+    </view>
+    <view class='textLayout'>
+      <text>兑换美元为：{{M}}</text>
+      <text>兑换英镑为：{{Y}}</text>
+      <text>兑换港币为：{{G}}</text>
+      <text>兑换欧元为：{{O}}</text>
+      <text>兑换韩元为：{{H}}</text>
+      <text>兑换日元为：{{R}}</text>
+    </view>
+  </form>
+```
+
+​	**form组件**（表单组件）：提交内部所包含交互组件（input, switch, slider, radio, checkbox, picker）的用户输入值，同时提交多个，相当于批处理
+
+​		属性：
+
+​			bindsubmit：携带form中的数据触发submit事件
+
+​			bindreset：表单重置时触发reset事件
+
+​		获取form内各组件value值的方法：
+
+​			当点击form表单中form-type为submit的button组件时，会将变淡内各组件的value值提交。（注意：需要设置表单内各组件的name属性，以区分）
+
+​		案例中这俩属性与按钮中的form-type属性（submit、reset）相关联，而其绑定的函数在js中定义
+
+​	
+
+​	**input组件**：
+
+​		placeholder——占位符
+
+​		type——弹出键盘类型，number数字键盘，好处——<u>不用再另外判断输入为非数字数据</u>
+
+​		auto-focus（bool）——自动聚焦
+
+​	
+
+​	button:
+
+​		type——primary，按钮样式类型：主要
+
+
+
+**WXSS**
+
+dispaly——布局模式，flex-弹性布局
+
+flex-direction——弹性盒子主轴方向，row/column
+
+justyfy-content——沿主轴方向对齐方式，center居中对齐
+
+align-items——沿交叉轴方向对齐方式，flex-start左对齐
+
+
+
+**JS，逻辑设计**
+
+​	**calc()**
+
+​	取得输入框的值：e.detail.value，这里有表单，后面还得加input组件的名字（wxml里面必须有定义），e.detail.value.cels
+
+​	parseInt——输入框取得的值都是字符串，转换成整数
+
+​	num.toFixed(4)——num保留小数点后4位
+
+​	
+
+​	**reset()**
+
+​	重置为 ‘’ 空字符串（中间没有空格）
+
+
+
+另外，别忘了鼠标中键的强大。(~~这个水印也是醉了~~)
+
+![鼠标中键的强大.gif](./鼠标中键.gif)
+
+
+
+
+
+### 6.2 三角形面积计算器
+
+用的是海伦公式（~~完了不会用Markdown写公式，很方~~~）：
+$$
+p=\frac{a+b+c}{2} 	（海伦因子）\\	
+S=\sqrt{p(p-a)(p-b)(p-c)}
+$$
+[^Markdown中的数学公式]: 当你需要在编辑器中插入数学公式时，可以使用两个美元符 $$ 包裹 TeX 或 LaTeX 格式的数学公式来实现。提交后，问答和文章页会根据需要加载 Mathjax 对数学公式进行渲染
+
+在线LaTeX数学公式编辑器：https://latex.91maths.com/
+
+（找了我好久的资料，舍本逐末？）
+
+
+
+代码：
+
+WXML
+
+```html
+<view class="box">
+  <view class='title'>三角形面积计算器</view>
+  <form bindsubmit="formSubmit">
+    输入三角形的三条边长：
+    <input type="digit" placeholder='第1条边长' name='a' value='{{a}}' />
+    <input type="digit" placeholder='第2条边长' name='b' value='{{b}}' />
+    <input type="digit" placeholder='第3条边长' name='c' value='{{c}}' />
+    <button form-type='submit'>计算</button>
+  </form>
+  <text>三角形的面积为：{{result}}</text>
+</view>
+```
+
+js
+
+```javascript
+formSubmit: function(e) {
+    var a = parseFloat(e.detail.value.a); //将input组件的value值转换为实数类型并赋值给变量a
+    var b = parseFloat(e.detail.value.b); //将input组件中的value值转换为实数类型并赋值给变量b
+    var c = parseFloat(e.detail.value.c); //将input组件中的value值转换为实数类型并赋值给变量c
+    var area; //定义存放面积的变量
+    if (a + b <= c || a + c <= b || b + c <= a) { //如果三角形的两边之和小于第三边
+      wx.showToast({ //调用API函数显示提示对话框
+        title: '三角形的两边之和小于第三边！', //对话框标题
+        icon: 'none', //对话框图标
+        duration: 2000, //对话框显示时长
+      });
+      this.clear(); //调用函数清空input组件中的数据
+      return;
+    } else { //计算三角形面积
+      var s = (a + b + c) / 2;
+      area = Math.sqrt(s * (s - a) * (s - b) * (s - c))
+    }
+    this.setData({
+      result: area //将三角形面积渲染到视图层
+    });
+  },
+  clear: function () { //清空input组件中输入的数据
+    this.setData({
+      a: '',
+      b: '',
+      c: '',
+      result: ''
+    })
+  }
+```
+
+有了6.1 这里应该不难懂，不同的是input组件里面多了一个value="{{a}}"，绑定了js中的a,b,c变量(在formsubmit中声名并定义了)
+
+​	老样子,	parseFloat(e.detail.value.a)，参数e代表的是点击按钮的事件，detail为事件中的组件，value就是组件的值，a指定具体组件
+
+
+
+注意这里要判断三边是否构成三角形	（~~接下来是不是要开始写输入日期判断星期了哈哈哈~~）
+
+几个常用API函数：
+
+- wx.showToast(Object object)，类似安卓里面的toast，显示消息提示框，
+
+  |   属性   |                说明                |          值          |
+  | :------: | :--------------------------------: | :------------------: |
+  |  title   |             提示的内容             |        string        |
+  |   icon   |                图标                | success,loading,none |
+  |  image   | 自定义图标本地路径，优先级高于icon |                      |
+  | duration |            延迟时间，ms            |                      |
+  |   mask   |   是否显示透明蒙层，防止触摸穿透   |                      |
+  | success  |       接口调用成功的回调函数       |                      |
+  |   fail   |       接口调用失败的回调函数       |                      |
+  | complete |       接口调用结束的回调函数       |                      |
+
+- wx.hideToast，隐藏消息提示框
+
+- wx.showLoading，显示loading提示框
+
+- wx.hideLoading，隐藏loading提示框
+
+- wx.showModal，显示模态对话框
+
+
+
+讨论区题目是一元二次方程求根，hhhh（~~快2点了，溜了溜了~~）
+
+
+
+
+
+
+## Week 7  小程序组件（2）
+
+
+
+
+
+
+
+**学的很渣，欢迎交流指教！**
 
