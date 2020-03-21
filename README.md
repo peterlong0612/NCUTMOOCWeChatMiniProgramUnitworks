@@ -313,7 +313,7 @@ $$
 
 在线LaTeX数学公式编辑器：https://latex.91maths.com/
 
-（找了我好久的资料，舍本逐末？）
+（原来csdn blog编辑器也有这个，找了我好久的资料，舍本逐末？）
 
 
 
@@ -392,13 +392,13 @@ formSubmit: function(e) {
   |   fail   |       接口调用失败的回调函数       |                      |
   | complete |       接口调用结束的回调函数       |                      |
 
-- wx.hideToast，隐藏消息提示框
+- wx.hideToast(Object object)，隐藏消息提示框
 
-- wx.showLoading，显示loading提示框
+- wx.showLoading(Object object)，显示loading提示框
 
-- wx.hideLoading，隐藏loading提示框
+- wx.hideLoading(Object object)，隐藏loading提示框
 
-- wx.showModal，显示模态对话框
+- wx.showModal(Object object)，显示模态对话框
 
 
 
