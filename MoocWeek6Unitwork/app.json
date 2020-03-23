@@ -1,0 +1,18 @@
+{
+  "pages": [
+    "pages/navmain/ovqe/ovqe",
+    "pages/navmain/navmain",
+    "pages/navmain/timer/timer",
+
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#0094ff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "white"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

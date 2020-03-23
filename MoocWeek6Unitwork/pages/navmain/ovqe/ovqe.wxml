@@ -1,0 +1,22 @@
+<!--pages/navmain/ovqe/ovqe.wxml-->
+<view class="box">
+  <view class="title">解一元二次方程</view>
+  <form bindsubmit="formsubmit" bindreset="reset">
+    <view class="layout">
+      <input name="a" type="number" placeholder="a" placeholder-style="text-align:center" ></input>
+      <text>x^2+</text>
+      <input name="b" type="number" placeholder="b" placeholder-style="text-align:center" ></input>
+      <text>x+</text>
+      <input name="c" type="number" placeholder="c" placeholder-style="text-align:center" ></input>
+      <text>=0</text> 
+  
+    </view>
+    <view class="layout">
+      <button type='primary' form-type="submit">求根</button>
+      <button type='primary' form-type="reset">清除</button>
+    </view>
+    
+    <view class="box">{{result}}</view>
+  </form>  
+
+</view>

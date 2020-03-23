@@ -1,0 +1,25 @@
+<!--pages/navmain/timer/timer.wxml-->
+<view>
+  <view class="timebox">
+    <view class="title">Timer</view>
+    <view class="time">
+      {{num}}
+    </view>
+    <view>
+      <view class="btns">
+        <button bindtap="start" style="background-color:{{btncolor[0]}};">开始计时</button>
+        <button bindtap="stop" style="background-color:{{btncolor[1]}};">停止计时</button>
+      </view>
+      <view>
+        <button bindtap="restart" style="background-color:{{btncolor[2]}}; width:730rpx;margin:10px">重新开始</button>
+      </view>
+    </view>
+  </view>
+
+  <view style="text-align:center;">
+    触底声音
+    <image src="/images/pinkstar.png" mode="aspectFit">
+    </image>
+  </view>
+
+</view>
