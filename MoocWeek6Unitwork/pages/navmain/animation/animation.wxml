@@ -1,0 +1,14 @@
+<!--pages/navmain/animation/animation.wxml-->
+<view class="waikaung">
+  <view class="skewblock">skewblock</view>
+  <view class="taiji">
+    <view class="tjcircle tjblack"></view>
+    <view class="tjcircle tjwhite"></view>
+  </view>
+</view>
+
+<view class="gradientblock">
+  <view class="myDH">
+
+  </view>
+</view>

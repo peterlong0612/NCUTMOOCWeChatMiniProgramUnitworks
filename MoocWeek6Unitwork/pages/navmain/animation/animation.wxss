@@ -1,0 +1,159 @@
+/* pages/navmain/animation/animation.wxss */
+
+.waikuang {
+  border: 1px solid silver;
+  height: 120px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.skewblock {
+  margin: 20px;
+  width: 60px;
+  height: 40px;
+  background-color: black;
+  line-height: 40px;
+  color: white;
+  font-size: 15px;
+  /* -webkit-transform: rotate(60deg); */
+  -webkit-animation: myskewrotate 10s linear 2s infinite normal;
+  /* animation: myfirst 10s linear 2s infinite alternate; *//* -webkit-animation: myfirst 5s linear 2s infinite alternate; */
+}
+
+.gradientblock {
+  border: 1px solid #2a2a2a;
+  margin: 60px 5px 5px 5px;
+  padding: 4px;
+  height: 360px;
+  background-color: white;
+  background-image: linear-gradient(60deg, white, #94ff00, #0094ff, black);
+}
+
+.myDH {
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  background-color: red;
+  position: relative;
+  /* animation: myfirst 10s linear 2s infinite alternate; */
+  -webkit-animation: myfirst 5s linear 2s infinite alternate;
+}
+
+.taiji {
+  width: 30px;  
+  height: 60px;
+  margin: 20px auto;
+  border-radius: 30px;
+  border: 1px solid gray;
+  border-left: 30px solid black;
+  -webkit-animation: mytjrotate 10s linear 2s infinite normal;
+}
+
+.tjcircle {
+  width: 0px;
+  height: 0px;
+  padding: 5px;
+  border-radius: 15px;
+  margin-left: -15px;
+}
+
+.tjblack {
+  border: 10px solid black;
+  background-color: white;
+}
+
+.tjwhite {
+  border: 10px solid white;
+  background-color: black;
+}
+
+/* @keyframes myfirst{
+  0%    {background-color: red; left: 0px; top:0px }
+  25%   {background-color: yellow; left: 200px; top:0px }
+  50%   {background-color: blue; left: 200px; top:200px }
+  75%   {background-color: green; left: 0px; top:200px }
+  100%  {background-color: red; left: 0px; top:0px }
+} */
+
+@-webkit-keyframes myfirst {
+  0% {
+    background-color: white;
+    left: 0px;
+    top: 0px;
+  }
+
+  25% {
+    background-color: yellow;
+    left: 200px;
+    top: 0px;
+    /* transform: rotate(45deg); */
+  }
+
+  50% {
+    background-color: blue;
+    left: 200px;
+    top: 200px;
+  }
+
+  75% {
+    background-color: green;
+    left: 0px;
+    top: 200px;
+  }
+
+  100% {
+    background-color: white;
+    left: 0px;
+    top: 0px;
+  }
+}
+
+@-webkit-keyframes myskewrotate {
+  0% {
+    background-color: black;
+    -webkit-transform: rotate(0deg);
+  }
+
+  25% {
+    background-color: yellow;
+    transform: rotate(90deg);
+  }
+
+  50% {
+    background-color: #94ff00;
+    transform: rotate(180deg);
+  }
+
+  75% {
+    background-color: blue;
+    transform: rotate(270deg);
+  }
+
+  100% {
+    background-color: black;
+    transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes mytjrotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(90deg);
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+
+  75% {
+    transform: rotate(270deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

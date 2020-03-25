@@ -15,6 +15,7 @@
   margin: 20rpx; /**外边距**/
   padding: 20rpx; /**内边距**/
   border: 1px solid silver; /**边框1px、实线、银灰色**/
+  background-color: rgba(0, 0, 0, 0)
 }
 
 .title {
