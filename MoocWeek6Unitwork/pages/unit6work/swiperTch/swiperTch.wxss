@@ -1,0 +1,14 @@
+/* pages/unit6work/swiperTch/swiperTch.wxss */
+.waikuang{
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid blueviolet; 
+  margin: 10px 0;
+  padding: 10px 0;
+}
+
+
+.myleft{
+  flex-grow: 1;
+  margin-left: 5px;
+}

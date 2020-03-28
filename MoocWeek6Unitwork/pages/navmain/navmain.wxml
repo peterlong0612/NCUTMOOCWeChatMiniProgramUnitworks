@@ -41,6 +41,6 @@
   </view>
 
   <view>
-    <image src="/images/Squarepants.gif" mode="aspextFit" style="margin:25px auto;"></image>
+    <image src="/images/Squarepants.gif" mode="aspextFit"></image>
   </view>
 </view>

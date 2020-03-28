@@ -326,7 +326,7 @@ align-items——沿交叉轴方向对齐方式，flex-start左对齐
 
 
 
-另外，别忘了鼠标中键的强大。(~~这个水印也是醉了~~)
+另外，别忘了鼠标中键的强大。(~~这个水印也是醉了~~) （工具在github搜索ScreenToGif）
 
 ![鼠标中键的强大.gif](./鼠标中键.gif)
 
@@ -438,6 +438,15 @@ formSubmit: function(e) {
 
 
 
+**细节:**
+
+1. 和6.1相比，这里没有了reset，自定义clear清除时，需要事先定义input的value为{{m}}，再setData；使用reset清除时，输入框内的内容都会自动清空，而其他输出的view等中内容需要自己手动在reset（或者bindreset绑定的其他命名函数）函数中setData指定值为空
+2. wxml中bind为{{m}}的m并不需要在js中再次声明，直接使用即可，但是赋值时要使用this.setData({})
+
+
+
+
+
 ### 6.3 设置字体样式和大小
 
 ​	利用radio组件改变字体类型，利用checkbox组件改变字体加粗、倾斜和下划线等样式。我感觉应该是改变之前静态样式，转变成通过用户交互动态设置样式
@@ -496,7 +505,7 @@ data: {
 
 ​	checkbox这里是将三个选项放在同一个列表（数组？）里，也说明了checkbox-group的bindchange事件的组件的值，是一个包含每个CheckBox的值的列表
 
-​	而每次勾选和取勾都会触发一次checkbox的change事件，text[]又经历从空到检查添加元素的过程
+​	而每次勾选和取勾都会触发一次checkbox的change事件，text[]又经历从空到检查添加元素的过程checkbox-group的事件的值为所有选中项集合的数组
 
 ​	
 

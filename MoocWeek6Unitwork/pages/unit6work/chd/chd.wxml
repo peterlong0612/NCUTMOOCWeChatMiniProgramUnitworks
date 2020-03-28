@@ -1,0 +1,25 @@
+<!--pages/unit6work/chd/chd.wxml-->
+
+<view class="box">
+  <view class="title">长度转换</view>
+  <form bindsubmit="calc" bindreset="reset">
+    <input name="cd" type="digit" placeholder="输入长度（m）" value='{{chd}}'></input>
+    <view class="btnlayout">
+      <button type="primary" form-type="submit">计算</button>
+      <button type="primary" form-type="reset">清除</button>
+    </view>
+
+    {{chdinput}}米等于
+    <view class="waikuang">
+      <view>微米：{{UM}}</view>
+      <view>英尺:{{feet}}</view>
+      <view>英寸:{{_in}}</view>
+      <view>码：{{yd}}</view>
+      <view>英里：{{mile}}</view>
+      <view>海里：{{nmi}}</view>
+      <view>丈：{{zhang}}</view>
+      <view>手：{{hand}}</view>
+    </view>
+
+  </form>
+</view>

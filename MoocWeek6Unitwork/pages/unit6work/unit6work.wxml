@@ -1,0 +1,46 @@
+<!--pages/unit6work/unit6work.wxml-->
+
+<view class="box" style="color:white;background-color:#2b2b2b;margin:0;">
+  <view class="title" style="color:white;">客官来点啥</view>
+  <view class="outbox">
+
+    <view class="box1">
+      <navigator url="./chd/chd" style="width:50%;line-height:100rpx;">
+        <view class="navbox">
+          <view class="navtext">清蒸长度转换</view>
+        </view>
+      </navigator>
+
+      <navigator url="../navmain/ovqe/ovqe" style="width:50%;line-height:100rpx;">
+        <view>
+          <view class="navtext">蒜炒一元二次方程</view>
+        </view>
+      </navigator>
+    </view>
+
+    <view class="box1">
+      <navigator url="./cboxRadio/cBoxRadio" style="width:50%;line-height:100rpx;">
+        <view>
+          <view class="navtext">醋溜颜色条</view>
+        </view>
+      </navigator>
+      <navigator url="../navmain/multmedia/multmedia" style="width:50%;line-height:100rpx;">
+        <view>
+          <view class="navtext">串烧音乐</view>
+        </view>
+      </navigator>
+
+    </view>
+    <view class="box1">
+      <navigator url="./swiperTch/swiperTch">
+        <view>
+          <view class="navtext">凌晨3点，越肝越饿</view>
+        </view>
+      </navigator>
+    </view>
+  </view>
+
+  <view>
+    <image src="/images/Squarepants.gif" mode="aspextFit"></image>
+  </view>
+</view>

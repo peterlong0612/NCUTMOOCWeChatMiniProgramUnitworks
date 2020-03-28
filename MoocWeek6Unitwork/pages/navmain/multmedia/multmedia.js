@@ -2,7 +2,7 @@
 
 const audioContext = wx.createInnerAudioContext();
 audioContext.volume = 0.5
-audioContext.src = "/audio/胡夏-那些年.mp3"
+audioContext.src = "/audio/PatrickStar.mp3"
 // var flag =0
 
 audioContext.onPlay(() => {

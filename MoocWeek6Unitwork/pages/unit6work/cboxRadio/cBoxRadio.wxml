@@ -1,0 +1,18 @@
+<!--pages/unit6work/cboxRadio/cBoxRadio.wxml-->
+<view class="box">
+  <view class="title">设置渐变</view>
+  <checkbox-group bindchange="checkboxchange">
+    <checkbox value="eblack">黑</checkbox>
+    <checkbox value="eblue">蓝</checkbox>
+    <checkbox value="ered">红</checkbox>
+    <checkbox value="egreen">绿</checkbox>
+    <checkbox value="ewhite">白 (两种以上才会显示)</checkbox>
+  </checkbox-group>
+  <radio-group bindchange="radiochange">
+    <radio value="0deg">水平</radio>
+    <radio value="60deg" checked="true">60°</radio>
+    <radio value="45deg">45°</radio>
+    <radio value="90deg">竖直</radio>
+  </radio-group>
+  <view class="gradientblock" style="background-image: linear-gradient({{degree}}, {{color}});"></view>
+</view>

@@ -1,9 +1,16 @@
 {
   "pages": [
+    "pages/unit6work/unit6work",
+    "pages/unit6work/chd/chd",
+    "pages/unit6work/cboxRadio/cBoxRadio",
+    "pages/unit6work/swiperTch/swiperTch",
+
     "pages/navmain/navmain",
     "pages/navmain/animation/animation",
+
     "pages/navmain/multmedia/multmedia",
     "pages/navmain/ovqe/ovqe",
+
     "pages/navmain/timer/timer",
     "pages/navmain/map/map",
     "pages/index/index",
@@ -14,6 +21,21 @@
     "navigationBarBackgroundColor": "#0094ff",
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/unit6work/unit6work",
+      "text": "Unit6work",
+      "iconPath": "/icons/android.png",
+      "selectedIconPath": "/icons/android_active.png"
+    },
+    {
+      "pagePath": "pages/navmain/navmain",
+      "text": "主菜单",
+      "iconPath": "/icons/Flickr.png",
+      "selectedIconPath": "/icons/Flickr_active.png"
+    }
+    ]
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"

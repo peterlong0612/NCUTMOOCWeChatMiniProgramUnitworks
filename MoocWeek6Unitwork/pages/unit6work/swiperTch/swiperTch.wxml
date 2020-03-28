@@ -1,0 +1,33 @@
+<!--pages/unit6work/swiperTch/swiperTch.wxml-->
+<view class="box">
+  <view class="title">Swiper and Switch</view>
+  <swiper 
+  indicator-dots 
+  autoplay="{{auto}}" 
+  circular="{{circular}}" 
+  vertical="{{ver}}" 
+  interval="{{intervaltime}}"
+  duration="500">
+    <view wx:for="{{images}}" wx:key="{{index}}">
+      <swiper-item>
+        <image style="width:;height:;" mode="scaleToFill" src="{{item}}"></image>
+      </swiper-item>
+    </view>
+  </swiper>
+  <view class="waikuang">
+    <text class="myleft">自动播放</text>
+    <switch checked="{{auto}}" bindchange="changeAuto"></switch>
+  </view>
+  <view class="waikuang">
+    <text class="myleft">循环播放</text>
+    <switch checked="{{circular}}" bindchange="changeCircular"></switch>
+  </view>
+  <view class="waikuang">
+    <text class="myleft">竖直播放</text>
+    <switch checked="{{ver}}" bindchange="changeVer"></switch>
+  </view>
+  <view class="waikuang">
+    <text class="myleft">自动切换时间间隔更快</text>
+    <switch checked="{{interval}}" bindchange="changeInterval"></switch>
+  </view>
+</view>
